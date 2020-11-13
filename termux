@@ -1,0 +1,25 @@
+#!/bin/sh
+clear
+echo " READY ?"
+echo "   Y/N  "
+read f in
+if [ $f = n ]
+then
+  clear
+  exit
+fi
+if [ $f = y ]
+then
+  clear
+
+  apt update && apt upgrade
+  sleep 2
+  clear
+  apt install figlet toilet ncurses-utils python python3 git nano wget curl 
+  sleep 2
+  clear
+  git clone https://github.com/D8m0n/zsh;cd zsh;bash syntax
+  sleep 2
+  clear
+  bash zsh
+fi
