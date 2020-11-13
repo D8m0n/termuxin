@@ -12,8 +12,15 @@ if [ $a = t ]
 then
   clear
   pkg update && pkg upgrade
-  pkg install nano git wget curl python python3 science-repo x11-repo
+  pkg install nano git wget curl python python2
+  pkg install science-repo x11-repo ncurses-utils 
+  sleep 3
   clear
+  tput setaf 6;echo " one moment pip kicked in and wants to do its dance"
+  sleep 4
+  clear
+  pip install --upgrade pip
+  pip install wheel main mechanize sparrow sphinx LICENSE lolcat php 
   cd
   git clone https://github.com/D8m0n/zsh
   cd /data/data/com.termux/files/home/zsh
@@ -73,6 +80,11 @@ read f in
 if [ $f = y ]
 then
   clear
+  bash /data/data/com.termux/files/home/termuxin/bash2nd
+  sleep 4
   bash /home/Damon/termuxin/bash2nd
+  sleep 4
+  bash /var/mobile/termuxin/bash2nd
 fi
+
 
