@@ -1,0 +1,67 @@
+#!/bin/sh
+clear
+echo " please choose system "
+echo " "
+echo " t):.Termux"
+echo " "
+echo "     l):.Debian-Linux"
+echo " "
+echo "         c):.Ios "
+read a in
+if [ $a = t ]
+then
+  clear
+  pkg update && pkg upgrade
+  pkg install nano git wget curl python python3 science-repo x11-repo
+  clear
+  cd
+  git clone https://github.com/D8m0n/zsh
+  cd /data/data/com.termux/files/home/zsh
+  bash syntax
+  sleep 2
+  clear
+  bash zsh
+  cd
+fi
+if [ $a = l ]
+then
+  clear
+  sudo apt update && sudo apt -y upgrade
+  sudo apt install nano git wget curl python3 python
+  pip install --upgrade pip
+  clear
+  pip install wheel main mechanize sphinx sparrow LICENSE lolcat
+  cd
+  git clone https://github.com/D8m0n/zsh
+  cd /home/Damon/zsh
+  bash syntax
+  bash zsh
+fi
+if [ $a = c ]
+then
+  clear
+  su
+  apt update
+  apt upgrade
+  apt install wget curl nano sudo ncurses git python python3
+  clear
+  git clone https://github.com/D8m0n/zsh
+  cd /var/root/zsh
+  bash syntax
+  bash zsh
+  clear
+  echo " add to sudoers?"
+  echo "      Y/N"
+  read b in
+  if [ $b = n ]
+  then 
+    clear
+    exit
+  fi
+  if [ $b = y ]
+  then
+    clear
+    nano /etc/sudoers
+    sleep 2
+  fi
+fi

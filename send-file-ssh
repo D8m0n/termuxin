@@ -1,0 +1,52 @@
+#!/bin/sh
+
+#scp /home/damon/file.txt nick@192.168.69.420:Music
+# sends file.txt from your home dir to user nick at ip and saves it to Music directory. 
+# destination path starts from users home dir
+
+clear
+echo " $(tput setaf 2)"
+echo "to send a file over ssh you must know the following"
+echo "ip address, username, password of the device to send to"
+echo "as well as the paths to the file and its destination"
+echo " "
+echo  "are you ready to proceed? $(tput setaf 1)y$(tput setaf 2)/$(tput setaf 1)n$(tput setaf 2)"
+echo " "
+read -p "continue?: $(tput setaf 1)" user_ready
+if [ $user_ready == y ]
+then
+  clear
+  echo " $(tput setaf 2)"
+fi
+if [ $user_ready == n ]
+then
+  exit
+fi
+echo " "
+echo "enter the ip address of target"
+echo " "
+read -p "ip: $(tput setaf 1)" user_ip
+clear
+echo " $(tput setaf 2)"
+echo"enter the username of target device"
+echo " "
+read -p "username: $(tput setaf 1)" user_name
+clear
+echo " $(tput setaf 2)"
+echo "enter the path of the file you want to send"
+echo "start from root"
+echo " "
+read -p "path: $(tput setaf 1)" user_file
+clear
+echo " $(tput setaf 2)"
+echo "enter destination path"
+echo " "
+read -p "destination: $(tput setaf 1)" user_dest
+clear
+echo " $(tput setaf 2)"
+scp $user_file $user_name@$user_ip:$user_dest
+echo " $(tput setaf 2)"
+echo "done..."
+sleep 3
+echo " $(tput reset)"
+
