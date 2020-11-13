@@ -36,4 +36,5 @@ if [ $q = 2 ]
 then
   clear
   cd /home/Damon/termuxin
-  cat peekin.txt
+  xfce4-terminal -e "cat peekin.txt" --hold
+fi
