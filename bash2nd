@@ -36,33 +36,4 @@ if [ $q = 2 ]
 then
   clear
   cd /home/Damon/termuxin
-  cat bash2nd
-fi
-
-
-
-
-
-
-
-
-
-
-
-
-
-git clone https://github.com/D8m0n/zsh
-git clone https://github.com/D8m0n/termuxin
-git clone https://github.com/nickbriggs501/master
-git clone https://github.com/Ranginang67/DarkFly-Tool
-git clone https://github.com/Lin8x/Tool-X.git/
-cd Tool-X
-sudo chmod +x
-bash install.aex
-git clone https://github.com/
-git clone https://github.com/
-git clone https://github.com/
-git clone https://github.com/
-git clone https://github.com/
-git clone https://github.com/
-git clone https://github.com/
+  cat peekin.txt
