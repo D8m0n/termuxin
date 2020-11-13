@@ -1,0 +1,68 @@
+#!/bin/sh
+clear
+echo " this will be a github repo autoinstaller "
+sleep 3
+clear
+echo " 1)clone all now"
+echo " "
+echo "     2)fine pick && choose"
+read q
+if [ $q = 1 ]
+then
+  clear
+  git clone https://github.com/D8m0n/zsh
+  cd zsh
+  bash syntax
+  bash zsh
+  cd
+  git clone https://github.com/D8m0n/termuxin
+  git clone https://github.com/nickbriggs501/master
+  git clone https://github.com/Ranginang67/DarkFly-Tool
+  cd DarkFly-Tool
+  sudo chmod +x install.py
+  sudo python2 install.py
+  sleep 4
+  clear
+  echo " IF THAT DIDNT WORK WAIT FEW SECS I WILL ATTEMPT PYTHON3"
+  sudo python3 install.py
+  cd
+  git clone https://github.com/Lin8x/Tool-X.git/
+  cd Tool-X
+  sudo chmod +x
+  sudo bash install.aex
+  cd
+fi
+if [ $q = 2 ]
+then
+  clear
+  cd /home/Damon/termuxin
+  cat bash2nd
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+git clone https://github.com/D8m0n/zsh
+git clone https://github.com/D8m0n/termuxin
+git clone https://github.com/nickbriggs501/master
+git clone https://github.com/Ranginang67/DarkFly-Tool
+git clone https://github.com/Lin8x/Tool-X.git/
+cd Tool-X
+sudo chmod +x
+bash install.aex
+git clone https://github.com/
+git clone https://github.com/
+git clone https://github.com/
+git clone https://github.com/
+git clone https://github.com/
+git clone https://github.com/
+git clone https://github.com/
