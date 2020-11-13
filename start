@@ -65,3 +65,14 @@ then
     sleep 2
   fi
 fi
+cd
+clear
+echo " continue to github repos"
+echo " Y/N"
+read f in
+if [ $f = y ]
+then
+  clear
+  bash /home/Damon/termuxin/bash2nd
+fi
+
