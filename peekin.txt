@@ -1,0 +1,20 @@
+#!/bin/sh
+clear
+git clone https://github.com/D8m0n/termuxin
+git clone https://github.com/nickbriggs501/master
+git clone https://github.com/Ranginang67/DarkFly-Tool
+git clone https://github.com/Lin8x/Tool-X.git/
+git clone https://github.com/D8m0n/zsh
+git clone  https://github.com/zsh-users/zsh-syntax-highlighting
+
+
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+cd $HOME
+echo "source /root/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh" >> .zshrc
+
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools$
+
+
