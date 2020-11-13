@@ -1,8 +1,8 @@
 #!/bin/sh
 clear
-echo " READY ?"
-echo "   Y/N  "
-read f in
+echo "     READY ?"
+echo " "
+echo "           Y/N  "
 if [ $f = n ]
 then
   clear
@@ -10,16 +10,17 @@ then
 fi
 if [ $f = y ]
 then
+  cd
   clear
-
   apt update && apt upgrade
+  apt install wget curl ncurses-utils git 
   sleep 2
   clear
-  apt install figlet toilet ncurses-utils python python3 git nano wget curl 
-  sleep 2
-  clear
-  git clone https://github.com/D8m0n/zsh;cd zsh;bash syntax
-  sleep 2
-  clear
+  git clone https://github.com/D8m0n/zsh
+  cd zsh
+  bash syntax
   bash zsh
 fi
+sleep 3
+cd
+nano /data/data/com.termux/files/home/.zshrc
